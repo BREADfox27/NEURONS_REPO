@@ -551,9 +551,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1635788098}
   - component: {fileID: 1635788097}
-  m_Layer: 0
-  m_Name: SUELO
-  m_TagString: Untagged
+  m_Layer: 16
+  m_Name: GROUND
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1135,6 +1135,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1680050586}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1680050582}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       insertIndex: -1
@@ -1223,6 +1226,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1680050586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680050580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568df483bdec4fe4bbc45d084ceb9d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 5
+  jumpForce: 10
 --- !u!1 &1798324086
 GameObject:
   m_ObjectHideFlags: 0
