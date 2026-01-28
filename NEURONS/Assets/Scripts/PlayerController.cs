@@ -7,8 +7,13 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private float horizontalInput;
 
+    [SerializeField] bool isGrounded;
+    [SerializeField] GameObject groundCheck;
+    [SerializeField] LayerMask groundLayer;
+
     public float speed;
     public float jumpForce;
+    private bool isFacingRight = true;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,8 +25,25 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         Movement();
         Jump();
+
+        if (horizontalInput > 0)
+        {
+            if (!isFacingRight)
+            {
+                Flip();
+            }
+        }
+
+        if (horizontalInput < 0)
+        {
+            if (isFacingRight)
+            {
+                Flip();
+            }
+        }
     }
 
     void Movement()
@@ -32,9 +54,16 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        isFacingRight = !isFacingRight;
     }
 }
