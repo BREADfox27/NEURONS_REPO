@@ -1,10 +1,11 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public float life;
+    public TextMeshProUGUI lifeText;
     
     private Rigidbody2D playerRb;
     private Animator anim;
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             life--;
+            lifeText.text = "Lifes: " + life;
             Debug.Log("-1 life.");
         }
     }
