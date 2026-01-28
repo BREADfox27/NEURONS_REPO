@@ -3,6 +3,8 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+    PlayerController playerController;
+    
     private Rigidbody2D playerRb;
     private Animator anim;
     private float horizontalInput;
@@ -13,7 +15,6 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float jumpForce;
-    private bool isFacingRight = true;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,22 +29,6 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         Movement();
         Jump();
-
-        if (horizontalInput > 0)
-        {
-            if (!isFacingRight)
-            {
-                Flip();
-            }
-        }
-
-        if (horizontalInput < 0)
-        {
-            if (isFacingRight)
-            {
-                Flip();
-            }
-        }
     }
 
     void Movement()
@@ -58,12 +43,5 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
-    }
-
-    void Flip()
-    {
-        Vector3 currentScale = transform.localScale;
-        currentScale.x *= -1;
-        isFacingRight = !isFacingRight;
     }
 }
