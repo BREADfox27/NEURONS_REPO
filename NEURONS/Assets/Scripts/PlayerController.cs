@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    PlayerController playerController;
+    public float life;
     
     private Rigidbody2D playerRb;
     private Animator anim;
@@ -46,6 +47,20 @@ public class PlayerController : MonoBehaviour
             {
                 FlipSprite();
             }
+        }
+
+        if (life == 0)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            life--;
+            Debug.Log("-1 life.");
         }
     }
 
