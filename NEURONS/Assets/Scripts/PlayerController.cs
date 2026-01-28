@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private Animator anim;
     private float horizontalInput;
+    private bool isFacingRight = true;
 
     [SerializeField] bool isGrounded;
     [SerializeField] GameObject groundCheck;
@@ -27,8 +28,25 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
+        
         Movement();
         Jump();
+
+        if (horizontalInput > 0)
+        {
+            if (!isFacingRight)
+            {
+                FlipSprite();
+            }
+        }
+
+        if (horizontalInput < 0)
+        {
+            if (isFacingRight)
+            {
+                FlipSprite();
+            }
+        }
     }
 
     void Movement()
@@ -39,9 +57,17 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
+    }
+
+    void FlipSprite()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        isFacingRight = !isFacingRight;
     }
 }
