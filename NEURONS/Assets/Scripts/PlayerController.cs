@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float jumpForce;
+    public GameObject life1;
+    public GameObject life2;
+    public GameObject life3;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -53,6 +56,16 @@ public class PlayerController : MonoBehaviour
         if (life == 0)
         {
             SceneManager.LoadScene("Lose");
+        }
+
+        if (life == 2)
+        {
+
+        }
+
+        if (life == 1)
+        {
+
         }
     }
 
