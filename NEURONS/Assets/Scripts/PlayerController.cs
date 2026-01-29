@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             life--;
+            AudioManager.Instance.PlaySFX(0);
             lifeText.text = "Lifes: " + life;
             Debug.Log("-1 life.");
         }
