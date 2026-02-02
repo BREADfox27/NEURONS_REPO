@@ -11,6 +11,7 @@ TagManager:
   - EnergyBall
   - Arrow
   - Arrow1
+  - EnergyBall1
   layers:
   - Default
   - TransparentFX

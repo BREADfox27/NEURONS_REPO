@@ -26,9 +26,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform respawnPoint;
 
     [Header("DeadBody Configuration")]
-    public GameObject keyToPress;
+    public GameObject arrowToShow;
+    public GameObject arrowToShow1;
     public GameObject deadBody1;
     public GameObject deadBody2;
+    public GameObject energyBall1;
+    public GameObject energyBall2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,9 +39,16 @@ public class PlayerController : MonoBehaviour
         life1.gameObject.SetActive(true);
         life2.gameObject.SetActive(false);
         life3.gameObject.SetActive(false);
-        keyToPress.gameObject.SetActive(false);
+
+        arrowToShow.gameObject.SetActive(false);
+        arrowToShow1.gameObject.SetActive(false);
+
         deadBody1.gameObject.SetActive(false);
         deadBody2.gameObject.SetActive(true);
+
+        energyBall1.gameObject.SetActive(false);
+        energyBall2.gameObject.SetActive(false);
+
         playerRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -104,20 +114,53 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Arrow"))
         {
-            keyToPress.gameObject.SetActive(true);
+            energyBall1.gameObject.SetActive(true);
+            arrowToShow.gameObject.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("Arrow1"))
+        {
+            energyBall2.gameObject.SetActive(true);
+            arrowToShow1.gameObject.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("EnergyBall"))
         {
-            transform.position = new Vector2(transform.position.x + 10f, transform.position.y + 1f);
+            energyBall1.gameObject.SetActive(false);
+            energyBall2.gameObject.SetActive(true);
+
+            deadBody1.gameObject.SetActive(true);
+            deadBody2.gameObject.SetActive(false);
+
+            arrowToShow.gameObject.SetActive(false);
+
+            transform.position = new Vector2(transform.position.x + 20f, transform.position.y + 1f);
+        }
+
+        if (other.gameObject.CompareTag("EnergyBall1"))
+        {
+            energyBall1.gameObject.SetActive(true);
+            energyBall2.gameObject.SetActive(false);
+
+            deadBody1.gameObject.SetActive(false);
+            deadBody2.gameObject.SetActive(true);
+
+            arrowToShow1.gameObject.SetActive(false);
+
+            transform.position = new Vector2(transform.position.x - 20f, transform.position.y + 1f);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Key"))
+        if (other.gameObject.CompareTag("Arrow"))
         {
-            keyToPress.gameObject.SetActive(false);
+            arrowToShow.gameObject.SetActive(false);
+        }
+
+        if (other.gameObject.CompareTag("Arrow1"))
+        {
+            arrowToShow1.gameObject.SetActive(false);
         }
     }
 
@@ -151,10 +194,5 @@ public class PlayerController : MonoBehaviour
     public void WalkingSound()
     {
         AudioManager.Instance.PlaySFX(1);
-    }
-
-    public void Teleportation()
-    {
-
     }
 }
