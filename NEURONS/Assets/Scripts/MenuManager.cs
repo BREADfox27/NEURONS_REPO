@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject controlsMenu;
+    public GameObject loreMenu;
 
     private void Start()
     {
@@ -25,8 +26,14 @@ public class MenuManager : MonoBehaviour
         controlsMenu.gameObject.SetActive(true);
     }
 
+    public void Lore()
+    {
+        loreMenu.gameObject.SetActive(true);
+    }
+
     public void CloseMenu()
     {
+        loreMenu.gameObject.SetActive(false);
         controlsMenu.gameObject.SetActive(false);
     }
 
