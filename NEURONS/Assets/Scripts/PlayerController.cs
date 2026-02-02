@@ -102,20 +102,14 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("BrainScene");
         }
 
-        if (other.gameObject.CompareTag("Key"))
+        if (other.gameObject.CompareTag("Arrow"))
         {
             keyToPress.gameObject.SetActive(true);
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Key"))
+        if (other.gameObject.CompareTag("EnergyBall"))
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                transform.position = new Vector2(transform.position.x + 10, transform.position.y + 1);
-            }
+            transform.position = new Vector2(transform.position.x + 10f, transform.position.y + 1f);
         }
     }
 
