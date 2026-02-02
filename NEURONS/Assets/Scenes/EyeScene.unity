@@ -3288,6 +3288,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: musicList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'sfxList.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: b64fee59138e98a488ed26455107b115, type: 3}
@@ -3295,6 +3299,10 @@ PrefabInstance:
       propertyPath: 'sfxList.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 880ee2c1626e9e543969e673b637a51b, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'musicList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 35110f4116d16be49b84fde4326c91b1, type: 3}
     - target: {fileID: 3738343188226254263, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_Name
       value: Sound
