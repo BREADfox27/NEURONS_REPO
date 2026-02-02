@@ -121,4 +121,9 @@ public class PlayerController : MonoBehaviour
         transform.localScale = currentScale;
         isFacingRight = !isFacingRight;
     }
+
+    public void WalkingSound()
+    {
+        AudioManager.Instance.PlaySFX(1);
+    }
 }
