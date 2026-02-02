@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float life;
-    public TextMeshProUGUI lifeText;
     
     private Rigidbody2D playerRb;
     private Animator anim;
@@ -81,7 +80,6 @@ public class PlayerController : MonoBehaviour
         {
             life--;
             AudioManager.Instance.PlaySFX(0);
-            lifeText.text = "Lifes: " + life;
             Debug.Log("-1 life.");
         }
     }
