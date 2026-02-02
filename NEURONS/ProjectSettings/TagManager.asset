@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Brain
   - DeadBody
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -38,7 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Raycast Detect
   - 
   - 
   m_SortingLayers:

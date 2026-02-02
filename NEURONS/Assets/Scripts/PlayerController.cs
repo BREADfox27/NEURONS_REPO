@@ -102,15 +102,26 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("BrainScene");
         }
 
-        if (other.gameObject.CompareTag("DeadBody"))
+        if (other.gameObject.CompareTag("Key"))
         {
             keyToPress.gameObject.SetActive(true);
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Key"))
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                transform.position = new Vector2(transform.position.x + 10, transform.position.y + 1);
+            }
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("DeadBody"))
+        if (other.gameObject.CompareTag("Key"))
         {
             keyToPress.gameObject.SetActive(false);
         }
@@ -146,5 +157,10 @@ public class PlayerController : MonoBehaviour
     public void WalkingSound()
     {
         AudioManager.Instance.PlaySFX(1);
+    }
+
+    public void Teleportation()
+    {
+
     }
 }
