@@ -25,12 +25,20 @@ public class PlayerController : MonoBehaviour
     [Header("Respawn Configuration")]
     [SerializeField] Transform respawnPoint;
 
+    [Header("DeadBody Configuration")]
+    public GameObject keyToPress;
+    public GameObject deadBody1;
+    public GameObject deadBody2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         life1.gameObject.SetActive(true);
         life2.gameObject.SetActive(false);
         life3.gameObject.SetActive(false);
+        keyToPress.gameObject.SetActive(false);
+        deadBody1.gameObject.SetActive(false);
+        deadBody2.gameObject.SetActive(true);
         playerRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -92,6 +100,19 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Brain"))
         {
             SceneManager.LoadScene("BrainScene");
+        }
+
+        if (other.gameObject.CompareTag("DeadBody"))
+        {
+            keyToPress.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DeadBody"))
+        {
+            keyToPress.gameObject.SetActive(false);
         }
     }
 
