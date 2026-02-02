@@ -5,22 +5,26 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float life;
-    
+
+    [Header("Player Configuration")]
     private Rigidbody2D playerRb;
     private Animator anim;
     private float horizontalInput;
     private bool isFacingRight = true;
-
-    [SerializeField] bool isGrounded;
-    [SerializeField] GameObject groundCheck;
-    [SerializeField] LayerMask groundLayer;
-
     public float speed;
     public float jumpForce;
     public GameObject life1;
     public GameObject life2;
     public GameObject life3;
-    
+
+    [Header("GroundCheck Configuration")]
+    [SerializeField] bool isGrounded;
+    [SerializeField] GameObject groundCheck;
+    [SerializeField] LayerMask groundLayer;
+
+    [Header("Respawn Configuration")]
+    [SerializeField] Transform respawnPoint;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -76,12 +80,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Obstacle"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             life--;
             AudioManager.Instance.PlaySFX(0);
+            Respawn();
+            other.gameObject.SetActive(true);
             Debug.Log("-1 life.");
         }
+
+        if (other.gameObject.CompareTag("Brain"))
+        {
+            SceneManager.LoadScene("BrainScene");
+        }
+    }
+
+    void Respawn()
+    {
+        transform.position = respawnPoint.position;
     }
 
     void Movement()
