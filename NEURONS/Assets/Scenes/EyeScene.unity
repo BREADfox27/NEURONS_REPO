@@ -2534,7 +2534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1201295272695193641, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.8784265
+      value: -0.6458292
       objectReference: {fileID: 0}
     - target: {fileID: -1201295272695193641, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2546,7 +2546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1201295272695193641, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.47787765
+      value: -0.763482
       objectReference: {fileID: 0}
     - target: {fileID: -997976166870667663, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       propertyPath: m_Layer
@@ -3267,11 +3267,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: sfxList.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: musicList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'sfxList.Array.data[0]'
@@ -3282,9 +3282,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 880ee2c1626e9e543969e673b637a51b, type: 3}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'sfxList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ca37302f423d514393d0db11e6b5a06, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'sfxList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 59e9e2a065a51534db471d38ad00b8d7, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'musicList.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 7e5818913c22f92479914c86acf83791, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'musicList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 356410ec1e8dcf9459e19489a0a63ee2, type: 3}
     - target: {fileID: 3738343188226254263, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_Name
       value: Sound

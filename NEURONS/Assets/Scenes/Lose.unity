@@ -772,12 +772,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: musicList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'sfxList.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 59e9e2a065a51534db471d38ad00b8d7, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'musicList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 356410ec1e8dcf9459e19489a0a63ee2, type: 3}
     - target: {fileID: 2705263382822584717, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_IsActive
       value: 0

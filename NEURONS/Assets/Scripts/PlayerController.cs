@@ -126,6 +126,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnergyBall"))
         {
+            AudioManager.Instance.PlaySFX(2);
+
             energyBall1.gameObject.SetActive(false);
             energyBall2.gameObject.SetActive(true);
 
@@ -139,6 +141,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnergyBall1"))
         {
+            AudioManager.Instance.PlaySFX(2);
+
             energyBall1.gameObject.SetActive(true);
             energyBall2.gameObject.SetActive(false);
 

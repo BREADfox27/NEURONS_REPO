@@ -1380,12 +1380,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: musicList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'musicList.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 7e5818913c22f92479914c86acf83791, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'musicList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 356410ec1e8dcf9459e19489a0a63ee2, type: 3}
     - target: {fileID: 3738343188226254263, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_Name
       value: Sound

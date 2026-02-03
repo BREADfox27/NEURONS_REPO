@@ -642,6 +642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4461b9df46b6f43a4e1e3013a8b20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  controlsMenu: {fileID: 0}
+  loreMenu: {fileID: 0}
 --- !u!1 &560310725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1225,10 @@ PrefabInstance:
     - target: {fileID: 3738343188226254263, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_Name
       value: Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846375894424323637, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: musicToPlay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8681557415024346601, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_LocalPosition.x
