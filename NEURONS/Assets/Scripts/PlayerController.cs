@@ -112,6 +112,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("BrainScene");
         }
 
+        if (other.gameObject.CompareTag("LastNeuron"))
+        {
+            SceneManager.LoadScene("Win");
+        }
+
         if (other.gameObject.CompareTag("Arrow"))
         {
             energyBall1.gameObject.SetActive(true);

@@ -12,6 +12,7 @@ TagManager:
   - Arrow
   - Arrow1
   - EnergyBall1
+  - LastNeuron
   layers:
   - Default
   - TransparentFX
