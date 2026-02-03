@@ -129,12 +129,13 @@ MonoBehaviour:
   musicList:
   - {fileID: 8300000, guid: 35110f4116d16be49b84fde4326c91b1, type: 3}
   - {fileID: 8300000, guid: 7e5818913c22f92479914c86acf83791, type: 3}
-  - {fileID: 8300000, guid: 356410ec1e8dcf9459e19489a0a63ee2, type: 3}
+  - {fileID: 8300000, guid: 822b44a4869cf91438e6623cce8678e4, type: 3}
   sfxList:
   - {fileID: 8300000, guid: b64fee59138e98a488ed26455107b115, type: 3}
   - {fileID: 8300000, guid: 880ee2c1626e9e543969e673b637a51b, type: 3}
   - {fileID: 8300000, guid: 2ca37302f423d514393d0db11e6b5a06, type: 3}
   - {fileID: 8300000, guid: 59e9e2a065a51534db471d38ad00b8d7, type: 3}
+  - {fileID: 8300000, guid: 552f0c789d7d5eb4791bcdbd437356de, type: 3}
 --- !u!1 &7888274174235814028
 GameObject:
   m_ObjectHideFlags: 0
