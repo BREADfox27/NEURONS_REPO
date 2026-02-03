@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 230213670}
   - component: {fileID: 230213669}
   - component: {fileID: 230213668}
+  - component: {fileID: 230213671}
   m_Layer: 0
   m_Name: Player(NEURy_ONSel-III)
   m_TagString: Untagged
@@ -433,6 +434,28 @@ MonoBehaviour:
   deadBody2: {fileID: 794710327}
   energyBall1: {fileID: 1584220183}
   energyBall2: {fileID: 555316921}
+--- !u!95 &230213671
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230213665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d01f912066ed8f4bbf2c4fb16220e2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &306038615
 GameObject:
   m_ObjectHideFlags: 0
