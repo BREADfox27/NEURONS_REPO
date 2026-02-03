@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalInput > 0)
         {
+            anim.SetBool("Run", true);
             if (!isFacingRight)
             {
                 FlipSprite();
@@ -71,10 +72,16 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalInput < 0)
         {
+            anim.SetBool("Run", true);
             if (isFacingRight)
             {
                 FlipSprite();
             }
+        }
+
+        if (horizontalInput == 0)
+        {
+            anim.SetBool("Idle", true);
         }
 
         if (life == 0)
