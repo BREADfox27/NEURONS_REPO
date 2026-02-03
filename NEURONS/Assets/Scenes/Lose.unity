@@ -766,9 +766,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: sfxList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: musicList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'sfxList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 59e9e2a065a51534db471d38ad00b8d7, type: 3}
+    - target: {fileID: 2705263382822584717, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3738343188226254263, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_Name
       value: Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846375894424323637, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: musicToPlay
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8681557415024346601, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -812,7 +832,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8681557415024346601, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1617653024}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
 --- !u!1 &378683348
@@ -2050,6 +2073,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 761218745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1617653023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617653024}
+  - component: {fileID: 1617653025}
+  m_Layer: 0
+  m_Name: SFXTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1617653024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617653023}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1631940686}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1617653025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617653023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788e55b116110ff4e9fd0059e2d8e74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXTrigger
+  sfxToPlay: 3
 --- !u!1 &1620126689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,6 +2256,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620126689}
   m_CullTransparentMesh: 1
+--- !u!4 &1631940686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8681557415024346601, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+  m_PrefabInstance: {fileID: 370204684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1878134254
 GameObject:
   m_ObjectHideFlags: 0

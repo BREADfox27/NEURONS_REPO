@@ -129,6 +129,7 @@ MonoBehaviour:
   musicList:
   - {fileID: 8300000, guid: 35110f4116d16be49b84fde4326c91b1, type: 3}
   - {fileID: 8300000, guid: 7e5818913c22f92479914c86acf83791, type: 3}
+  - {fileID: 8300000, guid: 59e9e2a065a51534db471d38ad00b8d7, type: 3}
   sfxList:
   - {fileID: 8300000, guid: b64fee59138e98a488ed26455107b115, type: 3}
   - {fileID: 8300000, guid: 880ee2c1626e9e543969e673b637a51b, type: 3}
