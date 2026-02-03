@@ -2437,6 +2437,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1680050585}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1680050586}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 9821b71128ea1194ea5e78089fc3a961, type: 3}
 --- !u!4 &1680050579 stripped
 Transform:
@@ -2518,6 +2521,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1680050586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680050580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d12be86de19b744910fd4a27e5b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WalkingSound
 --- !u!1 &1746005588
 GameObject:
   m_ObjectHideFlags: 0
