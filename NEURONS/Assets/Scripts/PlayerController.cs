@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput > 0)
         {
             anim.SetBool("Run", true);
-            anim.SetBool("Jump", false);
+            anim.SetBool("Jump", !isGrounded);
             if (!isFacingRight)
             {
                 FlipSprite();
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput < 0)
         {
             anim.SetBool("Run", true);
-            anim.SetBool("Jump", false);
+            anim.SetBool("Jump", !isGrounded);
             if (isFacingRight)
             {
                 FlipSprite();
@@ -202,7 +202,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Jump", true);
         }
 
-        if(isGrounded == true)
+        if(isGrounded == false)
         {
             anim.SetBool("Jump", false);
         }
