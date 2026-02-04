@@ -4508,7 +4508,7 @@ PrefabInstance:
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'sfxList.Array.data[4]'
       value: 
-      objectReference: {fileID: 8300000, guid: 552f0c789d7d5eb4791bcdbd437356de, type: 3}
+      objectReference: {fileID: 8300000, guid: 9ebd639dd965d8a4da734a2de3a18c3d, type: 3}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'musicList.Array.data[1]'
       value: 
