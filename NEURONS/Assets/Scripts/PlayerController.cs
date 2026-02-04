@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalInput == 0)
         {
-            anim.SetBool("Idle", true);
+            anim.SetBool("Run", false);
         }
 
         if (life == 0)
