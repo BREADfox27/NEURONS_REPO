@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput > 0)
         {
             anim.SetBool("Run", true);
+            anim.SetBool("Jump", false);
             if (!isFacingRight)
             {
                 FlipSprite();
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput < 0)
         {
             anim.SetBool("Run", true);
+            anim.SetBool("Jump", false);
             if (isFacingRight)
             {
                 FlipSprite();
@@ -197,6 +199,12 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             AudioManager.Instance.PlaySFX(4);
+            anim.SetBool("Jump", true);
+        }
+
+        if(isGrounded == true)
+        {
+            anim.SetBool("Jump", false);
         }
     }
 
