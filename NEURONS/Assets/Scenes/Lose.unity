@@ -768,7 +768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: sfxList.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: musicList.Array.size
@@ -779,9 +779,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 59e9e2a065a51534db471d38ad00b8d7, type: 3}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'sfxList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ebd639dd965d8a4da734a2de3a18c3d, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'sfxList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 14a623bf3fbf428409132480cc5ff954, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'musicList.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 356410ec1e8dcf9459e19489a0a63ee2, type: 3}
+      objectReference: {fileID: 8300000, guid: 822b44a4869cf91438e6623cce8678e4, type: 3}
     - target: {fileID: 2705263382822584717, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: m_IsActive
       value: 0

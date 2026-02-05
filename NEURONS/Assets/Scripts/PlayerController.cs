@@ -197,8 +197,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             AudioManager.Instance.PlaySFX(4);
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             anim.SetBool("Jump", true);
         }
 

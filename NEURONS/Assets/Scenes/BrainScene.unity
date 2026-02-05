@@ -4483,7 +4483,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: sfxList.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: musicList.Array.size
@@ -4509,6 +4509,10 @@ PrefabInstance:
       propertyPath: 'sfxList.Array.data[4]'
       value: 
       objectReference: {fileID: 8300000, guid: 9ebd639dd965d8a4da734a2de3a18c3d, type: 3}
+    - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
+      propertyPath: 'sfxList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 14a623bf3fbf428409132480cc5ff954, type: 3}
     - target: {fileID: 936806055532334030, guid: f1c9d4b9d4c7a6848b348262283f47e2, type: 3}
       propertyPath: 'musicList.Array.data[1]'
       value: 
