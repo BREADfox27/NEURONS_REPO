@@ -143,21 +143,21 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySFX(2);
 
             energyBall1.gameObject.SetActive(false);
-            energyBall2.gameObject.SetActive(true);
+            energyBall2.gameObject.SetActive(false);
 
             deadBody1.gameObject.SetActive(true);
             deadBody2.gameObject.SetActive(false);
 
             arrowToShow.gameObject.SetActive(false);
 
-            transform.position = new Vector2(transform.position.x + 37f, transform.position.y + 1f);
+            transform.position = new Vector2(transform.position.x + 45f, transform.position.y + 1f);
         }
 
         if (other.gameObject.CompareTag("EnergyBall1"))
         {
             AudioManager.Instance.PlaySFX(2);
 
-            energyBall1.gameObject.SetActive(true);
+            energyBall1.gameObject.SetActive(false);
             energyBall2.gameObject.SetActive(false);
 
             deadBody1.gameObject.SetActive(false);
@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
             arrowToShow1.gameObject.SetActive(false);
 
-            transform.position = new Vector2(transform.position.x - 20f, transform.position.y + 1f);
+            transform.position = new Vector2(transform.position.x - 45f, transform.position.y + 1f);
         }
     }
 
