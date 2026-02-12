@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
             arrowToShow.gameObject.SetActive(false);
 
-            transform.position = new Vector2(transform.position.x + 20f, transform.position.y + 1f);
+            transform.position = new Vector2(transform.position.x + 37f, transform.position.y + 1f);
         }
 
         if (other.gameObject.CompareTag("EnergyBall1"))
